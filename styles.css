@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap');
+
+body, .card{
+    background-color: #F8EDED;
+    font-family: 'Roboto Slab', serif;
+}
+
+.card{
+    border: none;
+}
+
+h1, h2{
+    font-family: 'Abril Fatface', cursive;
+}
+footer{
+    background-color: #f1cbdf;
+}
+
+.navbar, .footer-copyright{
+    background-color: #E4BAD4;
+}
+
+.btn{
+    background-color: #e4b8d3;
+    color: #495057;
+    border-radius: 17px;
+}
+.btn:hover{
+    color: #e7def0;
+}
+
+#year, #day {
+    background-color: #FFF; 
+    border: none;
+    border-radius: 17px;
+    text-align: center;
+}
+
+#month{
+    background-color: #FFF; 
+    border-radius: 17px;
+    border: none;
+    text-align: center;
+    text-align-last: center;
+}
+#imagen{
+    max-height: 200px;
+}
+
+
+.output{
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    background-color: #FFF;
+    border-radius: 17px;
+    border: none;
+    color: #495057;
+}
+
+.link{
+    color: #212529;
+}
+.link:hover{
+    color: #212529;
+    text-decoration: none;
+}
+
+.footer_c{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}

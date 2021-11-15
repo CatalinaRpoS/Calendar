@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="calendar.js"></script>
+    <link  rel="icon" href="Images/calendar.png" />
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand"><img src="Images/calendar.png" width="70" height="70" class="d-inline-block align-top" alt="Icono" loading="lazy"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active font-weight-bold" href="#Instrucciones">Instrucciones</a>
+                <a class="nav-item nav-link active font-weight-bold" href="#Calendario">Calendario</a>
+                <a class="nav-item nav-link active font-weight-bold" href="#Creditos">Créditos</a>
+                <a class="nav-item nav-link active font-weight-bold" href="#Autor">Acerca del Autor</a>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+    <section class="container" id="Instrucciones">
+      <br/>
+      <br/>
+      <div class="container-fluid">
+        <h2 class="text-center">Instrucciones</h2>
+        <p> En este Calendario podrás conocer en pocos segundos las fechas de la semana correspondientes a cada día durante los siglos XX y XXI, es decir, entre los años 1900 y 2100. ¡Espero que te sea de mucha utilidad!
+        </p>
+        <br/>
+      </div> 
+    </section>
+
+    <hr class="clearfix w-100">
+
+    <section class="container" id="Calendario">
+        <div class="card text-center">
+            <div class="card-body">
+              <br/>
+              <h1 class="card-title">Calendario</h1>
+              <p class="card-text">
+                <form class="container">
+                    <div class="row">
+                        <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                        </div>
+                        <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <label for="year">Año</label>
+                            <input type="number" min="1900" max="2100" class="form-control" id="year" rows="3" placeholder="Escribe aquí">
+                        </div>
+                        <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                      </div>
+                      <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <label for="month">Mes</label>
+                        <select class="form-control" id="month" rows="10">
+                          <option><span class="text-muted">Selecciona aquí</span></option>
+                          <option>Enero</option>
+                          <option>Febrero</option>
+                          <option>Marzo</option>
+                          <option>Abril</option>
+                          <option>Mayo</option>
+                          <option>Junio</option>
+                          <option>Julio</option>
+                          <option>Agosto</option>
+                          <option>Septiembre</option>
+                          <option>Octubre</option>
+                          <option>Noviembre</option>
+                          <option>Diciembre</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                      </div>
+                      <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <label for="day">Día</label>
+                        <input type="number"  min="1" max="31" class="form-control" id="day" rows="3" placeholder="Escribe aquí"></textarea>
+                      </div>
+                      <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                      </div>
+                      <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <br/>
+                        <button type="button" class="btn" onclick="findDate()">Encuentra la fecha</button>
+                        <br/>
+                      </div>
+                      <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                      </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                      <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                      </div>
+                      <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <label for="date">Fecha</label>
+                        <p class="output"><output id="date"><span class="text-muted">Esta es la fecha</span></output></p>
+                      </div>
+                      <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                      </div>
+                    </div>    
+                  </form>
+              </p>
+            </div>
+    </section>
+    <hr class="clearfix w-100">
+    
+    <br/>
+    <section class="container" id="Creditos">
+      <div class="container-fluid">
+        <h2 class="text-center">Créditos</h2>
+        <p>La siguiente fuente de información fue de vital importancia para la realización de este Caledario, y le doy mi mayor agradecimiento:
+          <ul>
+              <li>Iconos diseñados por <a href="https://www.freepik.com" title="Freepik" class="link">Freepik</a> desde <a href="https://www.flaticon.es/" class="link" title="Flaticon">www.flaticon.es</a></li>   
+          </ul>
+        </p>
+      </div> 
+    </section>
+    <br/>
+    </main>
+
+    <footer class="page-footer font-small teal pt-4" id="Autor">
+      <div class="container text-center">
+        
+        <div class="row">
+          <div class="col-md-6 mt-md-0 mt-3 footer-c">
+            <p>Catalina Restrepo Salgado</p>
+          </div>
+          
+          <hr class="clearfix w-100 d-md-none pb-3">
+          
+          <div class="col-md-6 mb-md-0 mb-3 footer_c">
+            <p>Matemáticas Discretas | 2021</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-copyright text-center py-3">
+        Universidad Nacional de Colombia Sede Medellín
+      </div>
+    
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+  </html>
